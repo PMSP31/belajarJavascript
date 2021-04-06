@@ -1,20 +1,20 @@
 var tanya = true;
 while (tanya) {
   // menentukan pilihan player
-  var p = prompt("Pilih : gunting,batu,kertas");
+  var p = prompt("Pilih : gajah,semut,orang");
   // menentukan pilihan komputer
   // membangkitkan bilangan random
   var comp = Math.random();
 
   // jika nilai komputer lebih kecil dari 0.34
   if (comp < 0.34) {
-    comp = "gunting";
+    comp = "gajah";
   } else if (comp >= 0.34 && comp < 0.67) {
     // jika nilai komputer lebih besar sama dengan 0.34 dan kurang dari 0.67
-    comp = "kertas";
+    comp = "orang";
   } else {
     // jika nilai komputer lebih dari 0.67
-    comp = "batu";
+    comp = "semut";
   }
   var hasil = "";
   // menentukan rules
@@ -22,17 +22,17 @@ while (tanya) {
   //jika nilai player dan computer sama maka seri
   if (p == comp) {
     hasil = "Seri";
-  } else if (p == "gunting") {
-    // player input gunting,jika computer input kertas maka player menang : jika batu komputer menang(menggunakan logika ternary)
-    hasil = comp == "kertas" ? "Menang" : "Kalah";
-  } else if (p == "kertas") {
-    // player input kertas,jika computer input gunting maka player kalah : jika batu komputer kalah(menggunakan logika ternary)
-    hasil = comp == "gunting" ? "Kalah" : "Menang";
-  } else if (p == "batu") {
-    // player input batu,jika computer input kertas maka player menang : jika gunting komputer menang(menggunakan logika ternary)
-    hasil = comp == "kertas" ? "Kalah" : "Menang";
+  } else if (p == "gajah") {
+    // player input gajah,jika computer input orang maka player menang : jika semut komputer menang(menggunakan logika ternary)
+    hasil = comp == "orang" ? "Menang" : "Kalah";
+  } else if (p == "orang") {
+    // player input orang,jika computer input gajah maka player kalah : jika semut komputer kalah(menggunakan logika ternary)
+    hasil = comp == "gajah" ? "Kalah" : "Menang";
+  } else if (p == "semut") {
+    // player input semut,jika computer input orang maka player menang : jika gajah komputer menang(menggunakan logika ternary)
+    hasil = comp == "orang" ? "Kalah" : "Menang";
   } else {
-    // jika memasukan input selain batu,gunting,kertas maka muncul alert
+    // jika memasukan input selain semut,gajah,orang maka muncul alert
     hasil = "memasukan input yang salah";
   }
   // tampilkan hasil
